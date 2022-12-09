@@ -27,7 +27,7 @@ for i in index:
 			data0,data1 = pointer0(*(tuple(_2ddata[0]))),pointer1(*(tuple(_2ddata[1])))
 			b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none "))
 			while True:
-						a = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish"))
+						a = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish "))
 						if not a == int(6):
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
 							c.set_xlabel(xlab)
@@ -61,10 +61,10 @@ for i in index:
 							del _3ddata,pointer0,pointer1,pointer2,data0,data1,data2,a,b
 							break
 
-if not str(input('Make Image :: y for YES, n for NO')) == str('n'):
+if not str(input('Make Image :: y for YES, n for NO ')) == str('n'):
 	plt.savefig(str(input('Your File Name Sir ::')))	
 
-if not str(input('View Plot Sir :: y for YES, n for NO')) == str('n'):
+if not str(input('View Plot Sir :: y for YES, n for NO ')) == str('n'):
 	plt.show()
 
 #https://github.com/alexandremax1m/_myautoplotlib
