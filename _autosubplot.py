@@ -37,7 +37,7 @@ for i in index:
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
 							c.set_xlabel(xlab)
 							c.set_ylabel(ylab)
-							plotdict={-1*-1:c.plot([i for i in data0],[i for i in data1]),-2*-1:c.scatter([i for i in data0],[i for i in data1]),-3*-1:plt.bar([i for i in data0],[i for i in data1]),-4*-1:c.stem([i for i in data0],[i for i in data1]),-5*-1:c.step([i for i in data0],[i for i in data1])}
+							plotdict={-1*-1:c.plot([i for i in data0],[i for i in data1]),-2*-1:c.scatter([i for i in data0],[i for i in data1]),-3*-1:c.bar([i for i in data0],[i for i in data1]),-4*-1:c.stem([i for i in data0],[i for i in data1]),-5*-1:c.step([i for i in data0],[i for i in data1])}
 							plotdict[a]						
 	else:
 		for x in range(1):
@@ -59,7 +59,7 @@ for i in index:
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
 							c.set_xlabel(xlab)
 							c.set_ylabel(ylab)
-							plotdict = {-1*-1:stackplot([i for i in data0],[i for i in data1],[i for i in data2]),-2*-1:c.fill_between([i for i in data0],[i for i in data1],[i for i in data2])}
+							plotdict = {-1*-1:c.stackplot([i for i in data0],[i for i in data1],[i for i in data2]),-2*-1:c.fill_between([i for i in data0],[i for i in data1],[i for i in data2])}
 							plotdict[a]
 
 if not str(input('Make Image :: y for YES, n for NO')) == str('n'):
