@@ -20,6 +20,7 @@ for i in index:
 	
 	if not int(input('2Dimensional Plot :: 2, 3Dimensional Plot ::3')) == int(3):
 		for x in range(1):
+			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
 			if not _2ddata[x]:
 				for x in range(int(input('How Many Values For YX Axes Sir ::'))):
 					_2ddata[0].append(int(input(f'Your X Coordinate {x} Sir ::')))
@@ -34,12 +35,13 @@ for i in index:
 							break
 						else:
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
-							c.set_xlabel(str(input('Your XLabel Sir :: ')))
-							c.set_ylabel(str(input('Your YLabel Sir :: ')))
+							c.set_xlabel(xlab)
+							c.set_ylabel(ylab)
 							plotdict={-1*-1:c.plot([i for i in data0],[i for i in data1]),-2*-1:c.scatter([i for i in data0],[i for i in data1]),-3*-1:plt.bar([i for i in data0],[i for i in data1]),-4*-1:c.stem([i for i in data0],[i for i in data1]),-5*-1:c.step([i for i in data0],[i for i in data1])}
 							plotdict[a]						
 	else:
 		for x in range(1):
+			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
 			if not _3ddata[x]:
 				for x in range(int(input('How Many Values For YXZ Axes Sir ::'))):
 					_3ddata[0].append(int(input(f'Your X Coordinate {x} Sir ::')))
@@ -55,8 +57,8 @@ for i in index:
 							break
 						else:
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
-							c.set_xlabel(str(input('Your XLabel Sir :: ')))
-							c.set_ylabel(str(input('Your YLabel Sir :: ')))
+							c.set_xlabel(xlab)
+							c.set_ylabel(ylab)
 							plotdict = {-1*-1:stackplot([i for i in data0],[i for i in data1],[i for i in data2]),-2*-1:c.fill_between([i for i in data0],[i for i in data1],[i for i in data2])}
 							plotdict[a]
 
