@@ -12,7 +12,7 @@ index = ip(*(tuple(thislist)))
 
 _2ddatafu = {-1*-1:plot,-2*-1:scatter,-3*-1:bar,-4*-1:stem,-5*-1:step}
 _3ddatafu = {-1*-1:stackplot,-2*-1:fill_between}
-_projections = {-1*-1:'aitoff',-2*-1:'hammer',-3*-1:'lambert',-4*-1:'mollweide',-5*-1:'polar',-6*-1:'rectilinear',-7*-1:'none'}
+_projections = {-1*-1:'aitoff',-2*-1:'hammer',-3*-1:'lambert',-4*-1:'mollweide',-5*-1:'polar',-6*-1:'rectilinear',-7*-1:None}
 
 for i in index:
 	
@@ -30,15 +30,16 @@ for i in index:
 			while True:
 						a = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish"))
 						b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none"))
-						if a == int(6):
-							del _2ddata,pointer0,pointer1,data0,data1,a,b
-							break
-						else:
+						if not a == int(6):
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
 							c.set_xlabel(xlab)
 							c.set_ylabel(ylab)
 							plotdict={-1*-1:c.plot([i for i in data0],[i for i in data1]),-2*-1:c.scatter([i for i in data0],[i for i in data1]),-3*-1:c.bar([i for i in data0],[i for i in data1]),-4*-1:c.stem([i for i in data0],[i for i in data1]),-5*-1:c.step([i for i in data0],[i for i in data1])}
-							plotdict[a]						
+							plotdict[a]	
+						elif a == int(6):
+							del _2ddata,pointer0,pointer1,data0,data1,a,b
+							break
+					
 	else:
 		for x in range(1):
 			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
@@ -52,19 +53,20 @@ for i in index:
 			while True:
 						a = int(input(f"Choose Plotting Style:: 1:Stackplot,2:FillBetween,3:Finish"))
 						b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none"))
-						if a == int(3):
-							del _3ddata,pointer0,pointer1,pointer2,data0,data1,data2,a,b
-							break
-						else:
+						if not a == int(3):
 							c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
 							c.set_xlabel(xlab)
 							c.set_ylabel(ylab)
 							plotdict = {-1*-1:c.stackplot([i for i in data0],[i for i in data1],[i for i in data2]),-2*-1:c.fill_between([i for i in data0],[i for i in data1],[i for i in data2])}
 							plotdict[a]
+						elif a == int(3):
+							del _3ddata,pointer0,pointer1,pointer2,data0,data1,data2,a,b
+							break
 
 if not str(input('Make Image :: y for YES, n for NO')) == str('n'):
 	plt.savefig(str(input('Your File Name Sir ::')))	
 
-plt.show()
+if not str(input('View Plot Sir :: y for YES, n for NO')) == str('n'):
+	plt.show()
 
 #https://github.com/alexandremax1m/_myautoplotlib
