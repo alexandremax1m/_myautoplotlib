@@ -12,7 +12,7 @@ index = ip(*(tuple(thislist)))
 
 _2ddatafu = {-1*-1:plot,-2*-1:scatter,-3*-1:bar,-4*-1:stem,-5*-1:step}
 _3ddatafu = {-1*-1:stackplot,-2*-1:fill_between}
-_projections = {-1*-1:'aitoff',-2*-1:'hammer',-3*-1:'lambert',-4*-1:'mollweide',-5*-1:'polar',-6*-1:'rectilinear'}
+_projections = {-1*-1:'aitoff',-2*-1:'hammer',-3*-1:'lambert',-4*-1:'mollweide',-5*-1:'polar',-6*-1:'rectilinear',-7*-1:'none'}
 
 for i in index:
 	
@@ -29,7 +29,7 @@ for i in index:
 					data0,data1 = pointer0(*(tuple(_2ddata[0]))),pointer1(*(tuple(_2ddata[1])))
 			while True:
 						a = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish"))
-						b = int(input(f"Choose Projection Style:: 1:aitoff,2:lambert,3:mollweide,4:polar,5:rectilinear:6:none"))
+						b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none"))
 						if a == int(6):
 							del _2ddata,pointer0,pointer1,data0,data1
 							break
@@ -51,7 +51,7 @@ for i in index:
 					data0,data1,data2 = pointer0(*(tuple(_3ddata[0]))),pointer1(*(tuple(_3ddata[1]))),pointer2(*(tuple(_3ddata[2])))
 			while True:
 						a = int(input(f"Choose Plotting Style:: 1:Stackplot,2:FillBetween,3:Finish"))
-						b = int(input(f"Choose Projection Style:: 1:aitoff,2:lambert,3:mollweide,4:polar,5:rectilinear:6:none"))
+						b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none"))
 						if a == int(3):
 							del _3ddata,pointer0,pointer1,pointer2,data0,data1,data2
 							break
