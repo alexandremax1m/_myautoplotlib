@@ -18,7 +18,7 @@ for i in index:
 	
 	_2ddata,_3ddata = [[],[]],[[],[],[]]
 	
-	if not int(input('2Dimensional Plot :: 2, 3Dimensional Plot ::3')) == int(3):
+	if not int(input('2Dimensional Plot :: 2, 3Dimensional Plot ::3  ')) == int(3):
 		for x in range(1):
 			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
 			if not _2ddata[x]:
