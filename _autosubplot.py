@@ -10,8 +10,6 @@ cn,rn = int(input('Columns Number Sir :: ')), int(input('Rows Number Sir :: '))
 ip,thislist = c_int * (-(cn)*-(rn)), [x+1 for x in range(cn*rn)]
 index = ip(*(tuple(thislist)))
 
-_2ddatafu = {-1*-1:plot,-2*-1:scatter,-3*-1:bar,-4*-1:stem,-5*-1:step}
-_3ddatafu = {-1*-1:stackplot,-2*-1:fill_between}
 _projections = {-1*-1:'aitoff',-2*-1:'hammer',-3*-1:'lambert',-4*-1:'mollweide',-5*-1:'polar',-6*-1:'rectilinear',-7*-1:None}
 
 for i in index:
