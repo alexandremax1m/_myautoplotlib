@@ -25,8 +25,8 @@ for i in index:
 				for x in range(int(input('How Many Values For YX Axes Sir ::'))):
 					_2ddata[0].append(int(input(f'Your X Coordinate {x} Sir ::')))
 					_2ddata[1].append(int(input(f'Your Y Coordinate {x} Sir ::')))
-					pointer0,pointer1 = c_int * (-(int(len(_2ddata[0])))*-1), c_int * (-(int(len(_2ddata[1])))*-1)
-					data0,data1 = pointer0(*(tuple(_2ddata[0]))),pointer1(*(tuple(_2ddata[1])))
+			pointer0,pointer1 = c_int * (-(int(len(_2ddata[0])))*-1), c_int * (-(int(len(_2ddata[1])))*-1)
+			data0,data1 = pointer0(*(tuple(_2ddata[0]))),pointer1(*(tuple(_2ddata[1])))
 			while True:
 						a = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish"))
 						b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none"))
@@ -47,8 +47,8 @@ for i in index:
 					_3ddata[0].append(int(input(f'Your X Coordinate {x} Sir ::')))
 					_3ddata[1].append(int(input(f'Your Y Coordinate {x} Sir ::')))
 					_3ddata[2].append(int(input(f'Your Z Coordinate {x} Sir ::')))
-					pointer0,pointer1,pointer2 = c_int * (-(int(len(_3ddata[0])))*-1),c_int * (-(int(len(_3ddata[1])))*-1),c_int * (-(int(len(_3ddata[1])))*-1)
-					data0,data1,data2 = pointer0(*(tuple(_3ddata[0]))),pointer1(*(tuple(_3ddata[1]))),pointer2(*(tuple(_3ddata[2])))
+			pointer0,pointer1,pointer2 = c_int * (-(int(len(_3ddata[0])))*-1),c_int * (-(int(len(_3ddata[1])))*-1),c_int * (-(int(len(_3ddata[1])))*-1)
+			data0,data1,data2 = pointer0(*(tuple(_3ddata[0]))),pointer1(*(tuple(_3ddata[1]))),pointer2(*(tuple(_3ddata[2])))
 			while True:
 						a = int(input(f"Choose Plotting Style:: 1:Stackplot,2:FillBetween,3:Finish"))
 						b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none"))
