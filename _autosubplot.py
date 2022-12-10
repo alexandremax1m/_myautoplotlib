@@ -21,7 +21,7 @@ for i in index:
 	if not int(input('2Dimensional Plot :: 2, 3Dimensional Plot ::3  ')) == int(3):
 		for j in onei:
 			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
-			if not _2ddata[i]:
+			if not _2ddata[j]:
 				for k in thismuchto10n(int(input('How Many Values For YX Axes Sir ::'))):
 					_2ddata[0].append(int(input(f'Your X Coordinate {k} Sir ::')))
 					_2ddata[1].append(int(input(f'Your Y Coordinate {k} Sir ::')))
@@ -43,7 +43,7 @@ for i in index:
 	else:
 		for j in onei:
 			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
-			if not _3ddata[i]:
+			if not _3ddata[j]:
 				for k in thismuchto10n(int(input('How Many Values For YXZ Axes Sir :: '))):
 					_3ddata[0].append(int(input(f'Your X Coordinate {k} Sir :: ')))
 					_3ddata[1].append(int(input(f'Your Y Coordinate {k} Sir :: ')))
