@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import plot,scatter,bar,stem,step
 from matplotlib.pyplot import stackplot,fill_between
 
-cp,rp = c_int * (-1*-1), c_int * (-1*-1)
-cn,rn = int(input('Columns Number Sir :: ')), int(input('Rows Number Sir :: '))
+from mytestnums import thismuchto10,thismuchto10n
+
+cp,rp,oneipo = c_int * (-1*-1), c_int * (-1*-1), c_int * (-1*-1)
+cn,rn, onei = int(input('Columns Number Sir :: ')), int(input('Rows Number Sir :: ')), oneipo(-0*-1)
 ip,thislist = c_int * (-(cn)*-(rn)), [x+1 for x in range(cn*rn)]
 index = ip(*(tuple(thislist)))
 
@@ -17,12 +19,12 @@ for i in index:
 	_2ddata,_3ddata = [[],[]],[[],[],[]]
 	
 	if not int(input('2Dimensional Plot :: 2, 3Dimensional Plot ::3  ')) == int(3):
-		for x in range(1):
+		for j in onei:
 			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
-			if not _2ddata[x]:
-				for x in range(int(input('How Many Values For YX Axes Sir ::'))):
-					_2ddata[0].append(int(input(f'Your X Coordinate {x} Sir ::')))
-					_2ddata[1].append(int(input(f'Your Y Coordinate {x} Sir ::')))
+			if not _2ddata[i]:
+				for k in thismuchto10n(int(input('How Many Values For YX Axes Sir ::'))):
+					_2ddata[0].append(int(input(f'Your X Coordinate {k} Sir ::')))
+					_2ddata[1].append(int(input(f'Your Y Coordinate {k} Sir ::')))
 			pointer0,pointer1 = c_int * (-(int(len(_2ddata[0])))*-1), c_int * (-(int(len(_2ddata[1])))*-1)
 			data0,data1 = pointer0(*(tuple(_2ddata[0]))),pointer1(*(tuple(_2ddata[1])))
 			b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none "))
@@ -39,14 +41,14 @@ for i in index:
 							break
 					
 	else:
-		for x in range(1):
+		for j in onei:
 			xlab,ylab = str(input('Your XLabel Sir :: ')),str(input('Your YLabel Sir :: '))
-			if not _3ddata[x]:
-				for x in range(int(input('How Many Values For YXZ Axes Sir :: '))):
-					_3ddata[0].append(int(input(f'Your X Coordinate {x} Sir :: ')))
-					_3ddata[1].append(int(input(f'Your Y Coordinate {x} Sir :: ')))
-					_3ddata[2].append(int(input(f'Your Z Coordinate {x} Sir :: ')))
-			pointer0,pointer1,pointer2 = c_int * (-(int(len(_3ddata[0])))*-1),c_int * (-(int(len(_3ddata[1])))*-1),c_int * (-(int(len(_3ddata[2])))*-1)
+			if not _3ddata[i]:
+				for k in thismuchto10n(int(input('How Many Values For YXZ Axes Sir :: '))):
+					_3ddata[0].append(int(input(f'Your X Coordinate {k} Sir :: ')))
+					_3ddata[1].append(int(input(f'Your Y Coordinate {k} Sir :: ')))
+					_3ddata[2].append(int(input(f'Your Z Coordinate {k} Sir :: ')))
+			pointer0,pointer1,pointer2 = c_int * (-(int(len(_3ddata[0])))*-1),c_int * (-(int(len(_3ddata[1])))*-1),c_int * (-(int(len(_3ddata[1])))*-1)
 			data0,data1,data2 = pointer0(*(tuple(_3ddata[0]))),pointer1(*(tuple(_3ddata[1]))),pointer2(*(tuple(_3ddata[2])))
 			b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none "))
 			c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
