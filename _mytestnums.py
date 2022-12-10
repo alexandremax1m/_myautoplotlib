@@ -13,3 +13,4 @@ def bign(n):
 # test,only use if later need to interact with c because of pointers c_int * n and c datatypes supporting
 # the return of the function is just a pointer with (n) this much values
 # main purpose is creating and modifying later on file descriptors for faster data processing with c
+# suitable for socket programming,tkinter & matplotlib,..
