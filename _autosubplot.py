@@ -46,7 +46,7 @@ for i in index:
 					_3ddata[0].append(int(input(f'Your X Coordinate {x} Sir :: ')))
 					_3ddata[1].append(int(input(f'Your Y Coordinate {x} Sir :: ')))
 					_3ddata[2].append(int(input(f'Your Z Coordinate {x} Sir :: ')))
-			pointer0,pointer1,pointer2 = c_int * (-(int(len(_3ddata[0])))*-1),c_int * (-(int(len(_3ddata[1])))*-1),c_int * (-(int(len(_3ddata[1])))*-1)
+			pointer0,pointer1,pointer2 = c_int * (-(int(len(_3ddata[0])))*-1),c_int * (-(int(len(_3ddata[1])))*-1),c_int * (-(int(len(_3ddata[2])))*-1)
 			data0,data1,data2 = pointer0(*(tuple(_3ddata[0]))),pointer1(*(tuple(_3ddata[1]))),pointer2(*(tuple(_3ddata[2])))
 			b = int(input(f"Choose Projection Style:: 1:aitoff,2:hammer,3:lambert,4:mollweide,5:polar:6:rectilinear,7:none "))
 			c = plt.subplot(int(f"{cn}{rn}{i}"),projection=_projections[b])
