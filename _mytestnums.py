@@ -11,6 +11,6 @@ def bign(n):
 
 # https://github.com/alexandremax1m/_myautoplotlib
 # test,only use if later need to interact with c because of pointers c_int * n and c datatypes supporting
-# the return of the function is just a pointer with (n) this much values, and the defined array
+# the return of the function is just a pointer with (n) this much values, and the defined array of length (n)
 # main purpose is creating and modifying later on file descriptors for faster data processing with c
-# suitable for socket programming,tkinter & matplotlib,..
+# suitable for socket programming,tkinter,matplotlib,..
