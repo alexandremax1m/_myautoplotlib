@@ -8,3 +8,5 @@ def thismuchto10n(n):
 
 def bign(n):
 	return (c_int * (-1*-int(n)))(*(tuple([x for x in range(n)])))
+
+#https://www.youtube.com/watch?v=n6bkSINd0W0
