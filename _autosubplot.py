@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import plot,scatter,bar,stem,step
 from matplotlib.pyplot import stackplot,fill_between
 
-from mytestnums import thismuchto10,thismuchto10n
+from _mytestnums import thismuchto10,thismuchto10n
 
 cp,rp,oneipo = c_int * (-1*-1), c_int * (-1*-1), c_int * (-1*-1)
 cn,rn, onei = int(input('Columns Number Sir :: ')), int(input('Rows Number Sir :: ')), oneipo(-0*-1)
