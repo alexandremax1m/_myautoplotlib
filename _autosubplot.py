@@ -62,8 +62,9 @@ for i in index:
 						elif a == int(3):
 							del _3ddata,pointer0,pointer1,pointer2,data0,data1,data2,a,b
 							break
-plt.subplots_adjust(left=0.2)
-							
+
+plt.subplots_adjust(left=0.20)
+
 if not str(input('Make Image :: y for YES, n for NO ')) == str('n'):
 	plt.savefig(str(input('Your File Name Sir ::')))	
 
