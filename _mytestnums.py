@@ -10,3 +10,4 @@ def bign(n):
 	return (c_int * (-1*-int(n)))(*(tuple([x for x in range(-1*-int(n))])))
 
 #@https://github.com/alexandremax1m/_myautoplotlib
+#test,only use if later need to interact with c
