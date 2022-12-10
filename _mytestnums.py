@@ -5,3 +5,6 @@ def thismuchto10(oneobject):
 
 def thismuchto10n(n):
 	return (c_int * (-1*-int(n)))(*(tuple(bytes([x for x in range(n)]))))
+
+def bign(n):
+	return (c_int * (-1*-int(n)))(*(tuple([x for x in range(n)])))
