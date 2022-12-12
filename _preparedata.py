@@ -1,7 +1,7 @@
 from ctypes import *
 from _pyintoctp import cintn
 
-def _prepare2d(*_2dlist):
+def _prepare2d():
 	_2dlist = [[],[]]
 	for i in cintn(int(input('How Many Values For XY Axes Sir :: '))):
 		_2dlist[0].append(int(input(f'Your Values X {i} Sir :: ')))
@@ -9,7 +9,7 @@ def _prepare2d(*_2dlist):
 	_2dlist[0],_2dlist[1] = bytes(_2dlist[0]),bytes(_2dlist[1])
 	return _2dlist
 
-def _prepare3d(*_3dlist):
+def _prepare3d():
 	_3dlist = [[],[],[]]
 	for i in cintn(int(input('How Many Values For XYZ Axes Sir :: '))):
 		_3dlist[0].append(int(input(f'Your Values X {i} Sir :: ')))
