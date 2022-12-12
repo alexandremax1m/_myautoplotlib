@@ -14,8 +14,8 @@ def _prepare3d():
 	_3dlist = [[],[],[]]
 	for i in cintn(int(input('How Many Values For XYZ Axes Sir :: '))):
 		_3dlist[-0*-1].append(int(input(f'Your Values X {i} Sir :: ')))
-		_3dlist[-1*-1].append(int(input(f'Your Values X {i} Sir :: ')))
-		_3dlist[-2*-1].append(int(input(f'Your Values X {i} Sir :: ')))
+		_3dlist[-1*-1].append(int(input(f'Your Values Y {i} Sir :: ')))
+		_3dlist[-2*-1].append(int(input(f'Your Values Z {i} Sir :: ')))
 	_3dlist[-0*-1],_3dlist[-1*-1],_3dlist[-2*-1] = bytes(_3dlist[-0*-1]),bytes(_3dlist[-1*-1]),bytes(_3dlist[-2*-1])
 	data0,data1,data2 = (c_int*(-(int(len(_3dlist[-0*-1])))*-1))(*(tuple(_3dlist[-0*-1]))),(c_int*(-(int(len(_3dlist[-1*-1])))*-1))(*(tuple(_3dlist[-1*-1]))),(c_int*(-(int(len(_3dlist[-2*-1])))*-1))(*(tuple(_3dlist[-2*-1])))
 	return {-1*-1:_3dlist,-0*-1:{-2*-1:data0,-1*-1:data1,-0*-1:data0}}
