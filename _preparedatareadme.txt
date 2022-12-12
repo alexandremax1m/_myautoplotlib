@@ -1,12 +1,7 @@
-## _preparedatausage
-
-# from _preparedata import preparedatadict
-# import matplotlib.pyplot as plt
-
-# a = preparedatadict[1]()
-# plt.plot([i for i in a[0],[i for i in a[1]])
-
-##test2 
-# a = [[1,2,3],[3,2,1]]
-# b = preparedatadict[4](a)
-# plt.plot([i for i in b[0]],[i for i in b[1]])
+### import sys
+### sys.getsizeof(bytes([1,2,3]) << sys.getsizeof([1,2,3])
+### functions return :: dict || [1 list with 2or3 bytelists], {1 dict with 2 keys// 2values of type c_array of c_int elements}
+### for plotting bytedata work faster,
+###      a = preparedatadict[-1*-1]() ### negatives -i seem to perform faster
+###    
+###                                      the other dict for other purpose
