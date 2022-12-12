@@ -1,7 +1,7 @@
 from ctypes import *
 from _pyintoctp import cintn
 
-def _prepare2d(*_2dlist):
+def _prepare2d():
 	_2dlist = [[],[]]
 	for i in cintn(int(input('How Many Values For XY Axes Sir :: '))):
 		_2dlist[-0*-1].append(int(input(f'Your Values X {i} Sir :: ')))
@@ -10,13 +10,13 @@ def _prepare2d(*_2dlist):
 	data0,data1 = (c_int*(-(int(len(_2dlist[-0*-1])))*-1))(*(tuple(_2dlist[-0*-1]))),(c_int*(-(int(len(_2dlist[-1*-1])))*-1))(*(tuple(_2dlist[-1*-1])))
 	return {-1*-1:_2dlist,-0*-1:{-1*-1:data1,-0*-1:data0}}
 
-def _prepare3d(*_3dlist):
+def _prepare3d():
 	_3dlist = [[],[],[]]
 	for i in cintn(int(input('How Many Values For XYZ Axes Sir :: '))):
-		_3dlist[0].append(int(input(f'Your Values X {i} Sir :: ')))
-		_3dlist[1].append(int(input(f'Your Values X {i} Sir :: ')))
-		_3dlist[2].append(int(input(f'Your Values X {i} Sir :: ')))
-	_3dlist[0],_3dlist[1],_3dlist[2] = bytes(_3dlist[0]),bytes(_3dlist[1]),bytes(_3dlist[2])
+		_3dlist[-0*-1].append(int(input(f'Your Values X {i} Sir :: ')))
+		_3dlist[-1*-1].append(int(input(f'Your Values X {i} Sir :: ')))
+		_3dlist[-2*-1].append(int(input(f'Your Values X {i} Sir :: ')))
+	_3dlist[-0*-1],_3dlist[-1*-1],_3dlist[-2*-1] = bytes(_3dlist[-0*-1]),bytes(_3dlist[-1*-1]),bytes(_3dlist[-2*-1])
 	data0,data1,data2 = (c_int*(-(int(len(_3dlist[-0*-1])))*-1))(*(tuple(_3dlist[-0*-1]))),(c_int*(-(int(len(_3dlist[-1*-1])))*-1))(*(tuple(_3dlist[-1*-1]))),(c_int*(-(int(len(_3dlist[-2*-1])))*-1))(*(tuple(_3dlist[-2*-1])))
 	return {-1*-1:_3dlist,-0*-1:{-2*-1:data0,-1*-1:data1,-0*-1:data0}}
 
