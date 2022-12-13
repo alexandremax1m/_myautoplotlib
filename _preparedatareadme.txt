@@ -6,3 +6,5 @@
 ###      a[-1*-1][-0*-1] >> first bytelist
 ###      a[-1*-1][-1*-1] >> second bytelist
 ###                                         the other dict for other purpose
+###      ctypes for indexing
+###      bytes for operating,and packing
