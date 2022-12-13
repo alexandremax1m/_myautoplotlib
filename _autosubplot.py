@@ -66,5 +66,5 @@ def thisprocessed():
 		plt.show()
 
 if __name__ != "__main__":
-	Process(target=thisprocessed().start())
+	Process(target=thisprocessed()).start()
 #https://github.com/alexandremax1m/_myautoplotlib
