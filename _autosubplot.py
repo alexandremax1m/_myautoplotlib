@@ -6,10 +6,8 @@ from matplotlib.pyplot import stackplot,fill_between
 
 from _pyintoctp import cintn
 
-from multiprocessing import Process
-
 cp,rp,oneipo = c_int * (-1*-1), c_int * (-1*-1), c_int * (-1*-1)
-cn,rn, oneci = cp(int(input('Columns Number Sir :: '))), rn(int(input('Rows Number Sir :: '))), oneipo(-0*-1)
+cn,rn, oneci = int(input('Columns Number Sir :: ')), int(input('Rows Number Sir :: ')), oneipo(-0*-1)
 ip,thislist = c_int * (-(cn)*-(rn)), [x+1 for x in range(cn*rn)]
 index = ip(*(tuple(thislist)))
 
