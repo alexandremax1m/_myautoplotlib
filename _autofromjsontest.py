@@ -7,7 +7,7 @@ from os import getcwd
 a,aa = [str(x) for x in Path(getcwd()).iterdir() if str(x).endswith('.json')],{}
 aa.update({x:a[x] for x in range(len(a))})
 
-jsonfile = json.load(open(aa[int(input(f'{a} Choose File Sir :: {aa} '))],'r'))
+jsonfile = json.load(open(aa[int(input(f'{a} Choose File Sir :: {aa} '))],'rb'))
 keyslist = [key for key in jsonfile]
 keys,chosenkeys,data = {},[],[]
 keys.update({x:keyslist[x] for x in range(len(keyslist))})
