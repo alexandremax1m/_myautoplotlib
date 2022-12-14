@@ -33,7 +33,7 @@ for i in index:
 		c = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish "))
 		if not c == int(6):
 			plotdict={-1*-1:b.plot,-2*-1:b.scatter,-3*-1:b.bar,-4*-1:b.stem,-5*-1:b.step}						
-			plotdict[c]([data[0][x][datakeys[0]] for x in range(len(data[0]))],[data[1][x][datakeys[1]] for x in range(len(data[0]))],color=_colors[int(input(f'{_colors}  Choose Color Sir :: '))])
+			plotdict[c]([data[0][x][datakeys[0]] for x in range(len(data[0]))],[data[1][x][datakeys[1]] for x in range(len(data[0]))],_colors[int(input(f'{_colors}  Choose Color Sir :: '))])
 		elif c == int(6):
 			del data,jsonfile,keyslist,keys,chosenkeys,datakeys
 			break	
