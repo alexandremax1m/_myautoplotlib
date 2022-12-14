@@ -31,11 +31,3 @@ for x in range(1,len(data[0])):
 
 plt.plot(data1,data2)
 plt.show()
-	
-	
-
-
-
-
-
-
