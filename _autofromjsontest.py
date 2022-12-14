@@ -22,12 +22,15 @@ for x in range(2):
 
 datakeys = [key for key in data[0][0]]
 
-data1,data2 = [],[]
-
-for x in range(1,len(data[0])):
-	data1.append(int(data[0][x][datakeys[0]]))
-	data2.append(int(data[0][x][datakeys[1]]))	
-
-plt.plot(data1,data2)
-plt.savefig(str(input('Your File Name Sir ::')))
+plt.plot(
+	[data[0][x][datakeys[0]] for x in range(1,len(data[0]))],
+	[data[1][x][datakeys[1]] for x in range(1,len(data[0]))])
 plt.show()
+
+#for x in range(1,len(data[0])):
+	#data1.append(int(data[0][x][datakeys[0]]))
+	#data2.append(int(data[0][x][datakeys[1]]))	
+
+#plt.plot((data[0])[datakeys[0]],(data[1])[datakeys[1]])
+#plt.savefig(str(input('Your File Name Sir ::')))
+#plt.show()
