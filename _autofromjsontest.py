@@ -26,13 +26,3 @@ plt.plot(
 	[data[0][x][datakeys[0]] for x in range(1,len(data[0]))],
 	[data[1][x][datakeys[1]] for x in range(1,len(data[0]))])
 plt.show()
-
-### foo([data[0]...]) >> apply a function to every variable in data[0]['key'],data[1]['key']
-
-#for x in range(1,len(data[0])):
-	#data1.append(int(data[0][x][datakeys[0]]))
-	#data2.append(int(data[0][x][datakeys[1]]))	
-
-#plt.plot((data[0])[datakeys[0]],(data[1])[datakeys[1]])
-#plt.savefig(str(input('Your File Name Sir ::')))
-#plt.show()
