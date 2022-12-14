@@ -34,8 +34,8 @@ for i in index:
 		if not c == int(6):
 			plotdict={-1*-1:b.plot,-2*-1:b.scatter,-3*-1:b.bar,-4*-1:b.stem,-5*-1:b.step}						
 			plotdict[c](
-						[data[0][x][datakeys[0]] for x in range(len(data[0]))],
-						[data[1][x][datakeys[1]] for x in range(len(data[0]))],color=_colors[int(input(f'{_colors}  Choose Color Sir :: '))])
+				[data[0][x][datakeys[0]] for x in range(len(data[0]))],
+				[data[1][x][datakeys[1]] for x in range(len(data[0]))],color=_colors[int(input(f'{_colors}  Choose Color Sir :: '))])
 		elif c == int(6):
 			del data
 			break	
