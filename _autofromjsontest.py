@@ -5,9 +5,7 @@ from pathlib import Path
 from os import getcwd
 
 a,aa = [str(x) for x in Path(getcwd()).iterdir() if str(x).endswith('.json')],{}
-
-for x in range(len(a)):
-	aa.update({x:a[x]})
+aa.update({x:a[x] for x in range(len(a))})
 
 jsonfile = json.load(open(aa[int(input(f'{a} Choose File Sir :: {aa} '))],'r'))
 keyslist = [key for key in jsonfile]
