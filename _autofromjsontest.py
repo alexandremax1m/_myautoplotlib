@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from os import getcwd
 
-a = [str(x) for x in Path(getcwd()).iterdir() if str(x).endswith('.json')]
-aa = {}
+a ,aa = [str(x) for x in Path(getcwd()).iterdir() if str(x).endswith('.json')],{}
 
 for x in range(len(a)):
 	aa.update({x:a[x]})
