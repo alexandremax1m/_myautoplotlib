@@ -30,4 +30,5 @@ for x in range(1,len(data[0])):
 	data2.append(int(data[0][x][datakeys[1]]))	
 
 plt.plot(data1,data2)
+plt.savefig(str(input('Your File Name Sir ::')))
 plt.show()
