@@ -9,7 +9,7 @@ a,aa = [str(x) for x in Path(getcwd()).iterdir() if str(x).endswith('.json')],{}
 for x in range(len(a)):
 	aa.update({x:a[x]})
 
-jsonfile = json.load(open(aa[int(input(f'{a} Choose File Sir :: {aa} '))]))
+jsonfile = json.load(open(aa[int(input(f'{a} Choose File Sir :: {aa} '))],'r'))
 keyslist = [key for key in jsonfile]
 keys,chosenkeys,data = {},[],[]
 
@@ -21,6 +21,7 @@ for x in range(2):
 	data.append([i for i in jsonfile[chosenkeys[x]]])
 
 datakeys = [key for key in data[0][0]]
+
 data1,data2 = [],[]
 
 for x in range(1,len(data[0])):
