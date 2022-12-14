@@ -21,7 +21,6 @@ for x in range(2):
 	data.append([i for i in jsonfile[chosenkeys[x]]])
 
 datakeys = [key for key in data[0][0]]
-
 data1,data2 = [],[]
 
 for x in range(1,len(data[0])):
