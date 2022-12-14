@@ -17,8 +17,9 @@ data.append(([i for i in jsonfile[chosenkeys[0]]]))
 data.append(([i for i in jsonfile[chosenkeys[1]]]))
 datakeys = [key for key in data[0][0]]
 
-plt.plot(
-	[data[0][x][datakeys[0]] for x in range(1,len(data[0]))],
-	[data[1][x][datakeys[1]] for x in range(1,len(data[0]))])
-plt.savefig(str(input('Your File Name Sir ::')))
-plt.show()
+if not len(data[0]) != len(data[1]) == True:
+	plt.plot(
+		[data[0][x][datakeys[0]] for x in range(1,len(data[0]))],
+		[data[1][x][datakeys[1]] for x in range(1,len(data[0]))])
+	plt.savefig(str(input('Your File Name Sir ::')))
+	plt.show()
