@@ -10,9 +10,8 @@ aa.update({x:a[x] for x in range(len(a))})
 jsonfile = json.load(open(aa[int(input(f'{a} Choose File Sir :: {aa} '))],'r'))
 keyslist = [key for key in jsonfile]
 keys,chosenkeys,data = {},[],[]
+keys.update({x:keyslist[x] for x in range(len(keyslist))})
 
-for x in range(len(keyslist)):
-	keys.update({x:keyslist[x]})
 for x in range(2):
 	print(keys)
 	chosenkeys.append(keys[int(input('Your Key Number Sir :: '))])
