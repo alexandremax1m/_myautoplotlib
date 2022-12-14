@@ -37,7 +37,7 @@ for i in index:
 				[data[0][x][datakeys[0]] for x in range(len(data[0]))],
 				[data[1][x][datakeys[1]] for x in range(len(data[0]))],color=_colors[int(input(f'{_colors}  Choose Color Sir :: '))])
 		elif c == int(6):
-			del data
+			del data,jsonfile,keyslist,keys,chosenkeys,datakeys
 			break	
 
 if not str(input('Make Image :: y for YES, n for NO ')) == str('n'):
