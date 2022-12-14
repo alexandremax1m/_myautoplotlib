@@ -23,3 +23,5 @@ if not len(data[0]) != len(data[1]) == True:
 		[data[1][x][datakeys[1]] for x in range(1,len(data[0]))])
 	plt.savefig(str(input('Your File Name Sir ::')))
 	plt.show()
+else:
+	print(f'{len(data[0])} :: {len(data[1])} are not symmetric dimensions to initiate the plot ')
