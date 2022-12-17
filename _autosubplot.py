@@ -21,9 +21,8 @@ for i in index:
 		b.set_xlabel(str(input('Your XLabel Sir :: ')))
 		b.set_ylabel(str(input('Your XLabel Sir :: ')))
 		for k in cintn(int(input('How Many Values For YX Axes Sir :: '))):
-			_2ddata[0].append(int(input(f'Your X Coordinate {k} Sir :: ')))
-			_2ddata[1].append(int(input(f'Your Y Coordinate {k} Sir :: ')))
-		_2ddata[0],_2ddata[1]=bytes(_2ddata[0]),bytes(_2ddata[1])
+			_2ddata[0].append(bytes(str(input(f'Your X Coordinate {k} Sir :: ')),encoding='UTF-8'))
+			_2ddata[1].append(bytes(str(input(f'Your Y Coordinate {k} Sir :: ')),encoding='UTF-8'))
 		while True:
 			c = int(input(f"Choose Plotting Style:: 1:Plot,2:Scatter,3:Bar,4:Stem,5:Step,6:Finish "))
 			if not c == int(6):
@@ -38,10 +37,9 @@ for i in index:
 		b.set_xlabel(str(input('Your XLabel Sir :: ')))
 		b.set_ylabel(str(input('Your XLabel Sir :: ')))
 		for k in cintn(int(input('How Many Values For YXZ Axes Sir :: '))):
-			_3ddata[0].append(int(input(f'Your X Coordinate {k} Sir :: ')))
-			_3ddata[1].append(int(input(f'Your Y Coordinate {k} Sir :: ')))
-			_3ddata[2].append(int(input(f'Your Z Coordinate {k} Sir :: ')))
-		_3ddata[0],_3ddata[1],_3ddata[2]=bytes(_3ddata[0]),bytes(_3ddata[1]),bytes(_3ddata[2])
+			_3ddata[0].append(bytes(str(input(f'Your X Coordinate {k} Sir :: ')),encoding='UTF-8'))
+			_3ddata[1].append(bytes(str(input(f'Your Y Coordinate {k} Sir :: ')),encoding='UTF-8'))
+			_3ddata[2].append(bytes(str(input(f'Your Z Coordinate {k} Sir :: ')),encoding='UTF-8'))
 		while True:
 			c = int(input(f"Choose Plotting Style:: 1:Stackplot,2:FillBetween,3:Finish "))
 			if not c == int(3):				
